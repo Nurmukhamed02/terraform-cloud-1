@@ -4,11 +4,14 @@ provider "aws" {
 
 
 terraform {
-  backend "s3" {
-      bucket = "mybucketnur2"
-      key    = "dev/terraform.tfstate"
-      region = "us-east-1"
-  }
+  backend "remote" {
+      hostname = "app.terraform.io"
+      organization = "ant-engineering"
+      
+    workspace {
+      name = "DEV"
+   }
+ }
 }
 
 data "aws_ami" "latest_amazon" {
