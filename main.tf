@@ -32,7 +32,7 @@ resource "aws_instance" "amazon_instance" {
     
    
     tags = {
-      Name = "My EC2 instance"
+      Name = "My EC2"
    
    }
 }
