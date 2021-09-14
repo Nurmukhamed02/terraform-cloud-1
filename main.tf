@@ -13,7 +13,7 @@ data "aws_ami" "latest_amazon" {
 
 
 variable "ec2_count" {
-  default = 2
+  default = 1
 }
 
 resource "aws_instance" "amazon_instance" {
