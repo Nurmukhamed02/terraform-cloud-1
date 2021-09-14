@@ -2,6 +2,15 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
+terraform {
+  backend "s3" {
+      bucket = "mybucketnur1"
+      key    = "dev/terraform.tfstate"
+      region = "us-east-1"
+  }
+}
+
 data "aws_ami" "latest_amazon" {
   owners = ["amazon"]
   most_recent = true
