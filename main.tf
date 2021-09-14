@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-
+#========================================================================================
 terraform {
   backend "remote" {
       hostname = "app.terraform.io"
@@ -13,7 +13,7 @@ terraform {
    }
  }
 }
-
+#=============================================================================================
 data "aws_ami" "latest_amazon" {
   owners = ["amazon"]
   most_recent = true
@@ -25,7 +25,7 @@ data "aws_ami" "latest_amazon" {
 
 
 variable "ec2_count" {
-  default = 1
+  default = 0
 }
 
 resource "aws_instance" "amazon_instance" {
