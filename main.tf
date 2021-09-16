@@ -24,12 +24,10 @@ data "aws_ami" "latest_amazon" {
 }
 
 
-variable "ec2_count" {
-  default = 3
-}
+
 
 resource "aws_instance" "amazon_instance" {
-    count = var.ec2_count
+    count = 2
     ami = data.aws_ami.latest_amazon.id
     instance_type = "t2.micro"
     
