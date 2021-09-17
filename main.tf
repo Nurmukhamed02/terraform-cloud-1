@@ -4,7 +4,7 @@ provider "aws" {
 
 #========================================================================================
 terraform {
-  backend "remote" {
+  back
       hostname = "app.terraform.io"
       organization = "ant-engineering"
       
